@@ -974,7 +974,7 @@ async def txt_handler(bot: Client, m: Message):
     await m.reply_text(f"⋅ ─ Total failed links is {failed_count} ─ ⋅")
     await m.reply_text(f"⋅ ─ list index ({raw_text}-{len(links)}) out of range ─ ⋅\n\n<blockquote><b>✨BATCH</b> » {b_name}✨</blockquote>\n\n⋅ ─ DOWNLOADING ✩ COMPLETED ─ ⋅")
 
-@bot.on_message(filters.text & filters.private)
+@bot.on_message(filters.command(["thakur"]) )
 async def text_handler(bot: Client, m: Message):
     if m.from_user.is_bot:
         return
